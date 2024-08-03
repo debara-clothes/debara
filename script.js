@@ -429,7 +429,8 @@ if (window.location.pathname == "/pages/cart.html") {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                'authorization': `debaraYes09${userToken}`
+                // 'authorization': `debaraYes09${userToken}`
+                'authorization': `debaraYes09eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNmYzE1MWZlZDY2NzhiMWMwODg5NiIsImlhdCI6MTcyMjcwNDg2M30.V8u650GLFhJlZlvWyRDcqm40L2km5HBHXkj7VoooiUw`
             },
             body: JSON.stringify({
                 count: newQuantity
