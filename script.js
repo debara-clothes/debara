@@ -2,6 +2,8 @@ const URL = 'https://debara.onrender.com';
 const userToken = localStorage.getItem('O_authDebWEB')
 let frontTshirtImage = new Image();
 let backTshirtImage = new Image();
+let frontCtx;
+let backCtx;
 
 document.addEventListener('DOMContentLoaded', () => {
     const loginSection = document.getElementById('login-section');
@@ -452,10 +454,10 @@ if (window.location.pathname == "/pages/cart.html") {
 if (window.location.pathname == "/pages/design.html") {
     // Front T-shirt Canvas and Context
     const frontCanvas = document.getElementById('frontCanvas');
-    const frontCtx = frontCanvas.getContext('2d');
+    frontCtx = frontCanvas.getContext('2d');
     // Back T-shirt Canvas and Context
     const backCanvas = document.getElementById('backCanvas');
-    const backCtx = backCanvas.getContext('2d');
+    backCtx = backCanvas.getContext('2d');
     let frontDesign = '';
     let backDesign = '';
 
