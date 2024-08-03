@@ -349,7 +349,7 @@ if (window.location.pathname == "/pages/product.html") {
 }
 
 if (window.location.pathname == "/pages/cart.html") {
-    const showCartDetails = (products, cartTotal, cartID) => {
+    function showCartDetails(products, cartTotal, cartID) {
         let cartona = ''
         for (let index = 0; index < products.length; index++) {
             const element = products[index];
