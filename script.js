@@ -203,7 +203,7 @@ if (window.location.pathname == "/pages/product.html") {
                 length: length ? length : undefined,
                 width: width ? width : undefined,
                 count: quantity < 1 ? 1 : quantity,
-                price: 399
+                price: 249
             }
             document.querySelector('.cart-btn').innerHTML = '<span class="loader"></span>'
             fetch(`${URL}/user/addToCart/${productName}`, {
@@ -323,7 +323,7 @@ if (window.location.pathname == "/pages/cart.html") {
             <img src=${element.picURL} alt="Product">
             <div class="cart-item-details">
                 <h3>${element.productName}</h3>
-                <p>Price: 399 EGP</p>
+                <p>Price: 249 EGP</p>
                 <div class="cart-item-quantity">
                     <label for="quantity1">Quantity:</label>
                     <input type="number" id="quantity1" name="quantity1" value=${element.count} min="1">
@@ -907,7 +907,7 @@ if (window.location.pathname == "/pages/design.html") {
                 data.append('image', backDesign)
                 data.append('category', 'T-Shirt')
                 data.append('productName', designName)
-                data.append('price', 399)
+                data.append('price', 249)
                 data.append('size', size)
                 if (width != '')
                     data.append('width', width)
@@ -960,7 +960,7 @@ if (window.location.pathname == "/pages/designCart.html") {
             <img src=${element.picURL[0]} alt=${element.productName}>
             <div class="design-info">
                 <h3>${element.productName}</h3>
-                <p>Price: 399 EGP</p>
+                <p>Price: 249 EGP</p>
                 <p>Implemented by Debara</p>
                 <div class="quantity-container">
                     <label for="quantity-${element.productName.replace(/\s+/g, '')}">Quantity:</label>
@@ -1016,7 +1016,7 @@ if (window.location.pathname == "/pages/designCart.html") {
             length: length ? length : undefined,
             width: width ? width : undefined,
             count: quantity < 1 ? 1 : quantity,
-            price: 399
+            price: 249
         }
 
         document.querySelector('.design-button-container button:first-child').innerHTML = '<span class="loader"></span>'
