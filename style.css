@@ -799,10 +799,6 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #45a049;
-}
-
 .upload-section {
     display: flex;
     flex-direction: column;
@@ -1163,10 +1159,6 @@ textarea {
         width: 650px;
     }
 }
-
-@media (max-width:1090px) {}
-
-@media (max-width:1820px) {}
 
 @media (max-width:1180px) {
     .design-section {
