@@ -1,5 +1,7 @@
 const URL = 'https://debara.onrender.com';
 const userToken = localStorage.getItem('O_authDebWEB')
+let frontTshirtImage = new Image();
+let backTshirtImage = new Image();
 
 document.addEventListener('DOMContentLoaded', () => {
     const loginSection = document.getElementById('login-section');
@@ -458,7 +460,6 @@ if (window.location.pathname == "/pages/design.html") {
     let backDesign = '';
 
     // Load initial T-shirt images
-    const frontTshirtImage = new Image();
     frontTshirtImage.onload = function () {
         resizeFrontCanvas();
         drawFrontCanvas();
@@ -470,7 +471,6 @@ if (window.location.pathname == "/pages/design.html") {
         frontTshirtImage.src = color;
     }
 
-    const backTshirtImage = new Image();
     backTshirtImage.onload = function () {
         resizeBackCanvas();
         drawBackCanvas();
@@ -624,10 +624,8 @@ if (window.location.pathname == "/pages/design.html") {
 
     // Back T-shirt Canvas Functions
     function resizeBackCanvas() {
-        if (backTshirtImage.width && backTshirtImage.height) {
-            backCanvas.width = backCanvas.parentNode.clientWidth;
-            backCanvas.height = backCanvas.width * (backTshirtImage.height / backTshirtImage.width);
-        }
+        backCanvas.width = backCanvas.parentNode.clientWidth;
+        backCanvas.height = backCanvas.width * (backTshirtImage.height / backTshirtImage.width);
     }
 
     document.getElementById('backLogoInput').addEventListener('change', function (event) {
