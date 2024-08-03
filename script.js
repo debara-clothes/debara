@@ -458,29 +458,27 @@ if (window.location.pathname == "/pages/design.html") {
     let backDesign = '';
 
     // Load initial T-shirt images
-    let frontTshirtImage = new Image();
+    const frontTshirtImage = new Image();
     frontTshirtImage.onload = function () {
         resizeFrontCanvas();
         drawFrontCanvas();
     };
-    frontTshirtImage.src = 'https://debara.store/img/white-front-mockup.jpg';
+    frontTshirtImage.src = '../img/white-front-mockup.jpg';
 
     // Replace with actual color
     function changeFrontColor(color) {
-        color = 'https://debara.store' + color
         frontTshirtImage.src = color;
     }
 
-    let backTshirtImage = new Image();
+    const backTshirtImage = new Image();
     backTshirtImage.onload = function () {
         resizeBackCanvas();
         drawBackCanvas();
     };
-    backTshirtImage.src = 'https://debara.store/img/white-back-mockup.jpg';
+    backTshirtImage.src = '../img/white-back-mockup.jpg';
 
     // Replace with actual color
     function changeBackColor(color) {
-        color = 'https://debara.store' + color
         backTshirtImage.src = color;
     }
 
