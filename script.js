@@ -435,6 +435,7 @@ if (window.location.pathname == "/pages/cart.html") {
                 } else {
                     showAlert(false, data.message)
                     document.querySelector('.cart-items').innerHTML = '<img src="../img/cart_is_empty.png" class="empty-cart" alt="cart-empty">'
+                    document.querySelector('.cart-total').innerHTML = ''
                     // Optionally handle error scenario
                 }
             })
@@ -985,9 +986,10 @@ if (window.location.pathname == "/pages/designCart.html") {
             }
         }).then(response => response.json())
             .then(data => {
-                if (data.message == 'success') {
+                if (data.message == 'success' && data.allDesign.length != 0) {
                     showDesignDetails(data.allDesign)
                 } else {
+                    document.getElementById('design-cart-content').innerHTML = '<img src="../img/design_empty.jpeg" class="empty-cart" alt="cart-empty">'
                     console.log('Error:', data.message);
                 }
             })
@@ -1062,11 +1064,12 @@ if (window.location.pathname == "/pages/designCart.html") {
             }
         }).then(response => response.json())
             .then(data => {
-                if (data.message == 'success') {
+                if (data.message == 'success' && data.allDesign.length != 0) {
                     // Optionally, update the UI or fetch cart details again
                     // Example: fetchCartDetails();
                     showDesignDetails(data.allDesign)
                 } else {
+                    document.getElementById('design-cart-content').innerHTML = '<img src="../img/design_empty.jpeg" class="empty-cart" alt="cart-empty">'
                     console.log(data.message);
                     // Optionally handle error scenario
                 }
