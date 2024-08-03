@@ -1014,13 +1014,16 @@ if (window.location.pathname == "/pages/designCart.html") {
             return;
         }
 
+        const newLength = parseInt(length)
+        const newWidth = parseInt(width)
+
         const formData = {
             productName,
             category: 'T-Shirt',
             size,
             picURL,
-            length: length ? length : undefined,
-            width: width ? width : undefined,
+            length: newLength ? newLength : undefined,
+            width: newWidth ? newWidth : undefined,
             count: quantity < 1 ? 1 : quantity,
             price: 249
         }
