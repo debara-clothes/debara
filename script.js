@@ -463,10 +463,11 @@ if (window.location.pathname == "/pages/design.html") {
         resizeFrontCanvas();
         drawFrontCanvas();
     };
-    frontTshirtImage.src = '../img/white-front-mockup.jpg';
+    frontTshirtImage.src = 'https://debara.store/img/white-front-mockup.jpg';
 
     // Replace with actual color
     function changeFrontColor(color) {
+        color = 'https://debara.store' + color
         frontTshirtImage.src = color;
     }
 
@@ -475,10 +476,11 @@ if (window.location.pathname == "/pages/design.html") {
         resizeBackCanvas();
         drawBackCanvas();
     };
-    backTshirtImage.src = '../img/white-back-mockup.jpg';
+    backTshirtImage.src = 'https://debara.store/img/white-back-mockup.jpg';
 
     // Replace with actual color
     function changeBackColor(color) {
+        color = 'https://debara.store' + color
         backTshirtImage.src = color;
     }
 
