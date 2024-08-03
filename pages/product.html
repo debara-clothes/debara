@@ -4,10 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T-shirt Product Details - My E-commerce Website</title>
-    <!-- Link to Font Awesome for icons -->
+    <title>T-shirt Product Details -  Debara</title>
+    <meta name="description" content="Explore the details of our T-shirt product at Debara. Learn about its features, materials, and more.">
+    <meta name="keywords" content="T-shirt details, T-shirt features, T-shirt materials, T-shirt product, My E-commerce Website">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Your Name or Company Name">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="T-shirt Product Details - My E-commerce Website">
+    <meta property="og:description" content="Explore the details of our T-shirt product at My E-commerce Website. Learn about its features, materials, and more.">
+    <meta property="og:url" content="https://www.yourwebsite.com/product-details.html">
+    <meta property="og:image" content="https://www.yourwebsite.com/img/product-image.jpg">
+    <meta property="og:image:alt" content="T-shirt Product Image">
+    <meta property="og:site_name" content="My E-commerce Website">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="T-shirt Product Details - My E-commerce Website">
+    <meta property="twitter:description" content="Explore the details of our T-shirt product at My E-commerce Website. Learn about its features, materials, and more.">
+    <meta property="twitter:image" content="https://www.yourwebsite.com/img/product-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.ico">
+    
+    <!-- CSS and other external resources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Link to style.css -->
     <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -19,8 +41,8 @@
         </div>
         <div class="navbar-right">
             <div class="icons">
-                <a href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
-                <a href="#"><i class="fas fa-heart"></i></a>
+                <a onclick="goToCart()"><i class="fas fa-shopping-cart"></i></a>
+                <a onclick="goToDesignCart()"><i class="fas fa-camera"></i></a>
             </div>
             <div class="login" id="login-section">
                 <!-- Placeholder for avatar or login button -->

@@ -5,14 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link to Font Awesome for icons -->
+    <title>Debara - Create Your Own Clothing Design</title>
+    <meta name="description" content="Debara lets you create your own clothing design easily. Express your personality and stand out from others with unique designs.">
+    <meta name="keywords" content="Debara, clothing design, custom clothing, design your own clothes, personalized clothing">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Debara">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Debara - Create Your Own Clothing Design">
+    <meta property="og:description" content="Debara lets you create your own clothing design easily. Express your personality and stand out from others with unique designs.">
+    <meta property="og:url" content="https://www.yourwebsite.com">
+    <meta property="og:image" content="https://www.yourwebsite.com/img/og-image.jpg">
+    <meta property="og:image:alt" content="Debara Logo">
+    <meta property="og:site_name" content="Debara">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Debara - Create Your Own Clothing Design">
+    <meta property="twitter:description" content="Debara lets you create your own clothing design easily. Express your personality and stand out from others with unique designs.">
+    <meta property="twitter:image" content="https://www.yourwebsite.com/img/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+    
+    <!-- CSS and other external resources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Link to css Carousel Slider -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <!-- Link to style.css -->
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
 
 <body>
@@ -23,8 +44,8 @@
         </div>
         <div class="navbar-right">
             <div class="icons">
-                <a href="./pages/cart.html"><i class="fas fa-shopping-cart"></i></a>
-                <a href="#"><i class="fas fa-heart"></i></a>
+                <a onclick="goToCart()"><i class="fas fa-shopping-cart"></i></a>
+                <a onclick="goToDesignCart()"><i class="fas fa-camera"></i></a>
             </div>
             <div class="login" id="login-section">
                 <!-- Placeholder for avatar or login button -->

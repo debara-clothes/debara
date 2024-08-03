@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         logoutBtn.addEventListener('click', () => {
             localStorage.removeItem('O_authDebWEB');
-            window.location.assign('http://127.0.0.1:49204'); // Reload to reset the state
+            window.location.assign('https://debara.store/'); // Reload to reset the state
         });
     } else {
         // User is not logged in
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // function using for going to cart page 
 function goToCart() {
     if (userToken) {
-        window.location.assign('http://127.0.0.1:49204'); // Reload to reset the state
+        window.location.assign('https://debara.store/pages/cart.html'); // Reload to reset the state
     } else {
         window.location.assign('https://debara-clothes.github.io/auth/'); //  go to login page
     }
@@ -44,17 +44,9 @@ function goToCart() {
 // function using for going to design cart page 
 function goToDesignCart() {
     if (userToken) {
-        window.location.assign('http://127.0.0.1:49204'); // Reload to reset the state
+        window.location.assign('https://debara.store/pages/designCart.html'); // Reload to reset the state
     } else {
         window.location.assign('https://debara-clothes.github.io/auth/'); // go to login page
-    }
-}
-
-function goToCart() {
-    if (userToken) {
-        window.location.assign('http://127.0.0.1:49204'); // Reload to reset the state
-    } else {
-        window.location.assign('http://127.0.0.1:49204'); // Reload to reset the state
     }
 }
 
@@ -243,7 +235,7 @@ if (window.location.pathname == "/pages/product.html") {
                 });
 
         } else {
-            window.location.href = 'http://localhost:3000/';
+            window.location.href = 'https://debara-clothes.github.io/auth/';
         }
     }
 
@@ -354,7 +346,7 @@ if (window.location.pathname == "/pages/cart.html") {
     // go to order page with total amount
     function goToOrder(totalAmount, cartID) {
         totalWithShipping = parseInt(totalAmount) + 80
-        window.location.assign(`http://127.0.0.1:49510/pages/order.html?totalAmount=${totalWithShipping}&cartID=${cartID}`);
+        window.location.assign(`https://debara.store/pages/order.html?totalAmount=${totalWithShipping}&cartID=${cartID}`);
     }
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -884,7 +876,7 @@ if (window.location.pathname == "/pages/design.html") {
         if (userToken) {
             document.querySelector('.design-popup-container').classList.replace('hide-popup', 'active-popup')
         } else {
-            window.location.assign('http://127.0.0.1:49204'); // Reload to reset the state
+            window.location.assign('https://debara-clothes.github.io/auth/'); // go to Login page
         }
     }
 
@@ -1191,5 +1183,4 @@ if (window.location.pathname == "/pages/order.html") {
     document.getElementById('closeWindow').addEventListener('click', function () {
         document.getElementById('thankYouWindow').classList.add('hidden');
     });
-
 }

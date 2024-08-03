@@ -4,11 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Completion Page</title>
-    <!-- Link to Font Awesome for icons -->
+    <title>Order Completion Page - Debara</title>
+    <meta name="description" content="Complete your order for custom T-shirts at Debara. Fill out the form with your name, address, phone number, and select your city to finalize your purchase.">
+    <meta name="keywords" content="order completion, complete order, custom t-shirt order, finalize purchase, Debara">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Your Name or Company Name">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Order Completion Page - Debara">
+    <meta property="og:description" content="Complete your order for custom T-shirts at Debara. Fill out the form with your name, address, phone number, and select your city to finalize your purchase.">
+    <meta property="og:url" content="https://www.yourwebsite.com/order-completion.html">
+    <meta property="og:image" content="https://www.yourwebsite.com/img/order-completion-preview.jpg">
+    <meta property="og:image:alt" content="Order Completion Page Preview">
+    <meta property="og:site_name" content="Debara">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Order Completion Page - Debara">
+    <meta property="twitter:description" content="Complete your order for custom T-shirts at Debara. Fill out the form with your name, address, phone number, and select your city to finalize your purchase.">
+    <meta property="twitter:image" content="https://www.yourwebsite.com/img/order-completion-preview.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.ico">
+    
+    <!-- CSS and other external resources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Link to style.css -->
     <link rel="stylesheet" href="../style.css">
+</head>
+
 </head>
 
 <body>
@@ -19,8 +43,8 @@
         </div>
         <div class="navbar-right">
             <div class="icons">
-                <a href="./cart.html"><i class="fas fa-shopping-cart"></i></a>
-                <a href="#"><i class="fas fa-heart"></i></a>
+                <a onclick="goToCart()"><i class="fas fa-shopping-cart"></i></a>
+                <a onclick="goToDesignCart()"><i class="fas fa-camera"></i></a>
             </div>
             <div class="login" id="login-section">
                 <!-- Placeholder for avatar or login button -->
