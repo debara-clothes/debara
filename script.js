@@ -76,11 +76,12 @@ function goToCart() {
 
 // function using for going to design cart page 
 function goToDesignCart() {
-    if (userToken) {
-        window.location.assign('https://debara.store/pages/designCart.html'); // Reload to reset the state
-    } else {
-        window.location.assign('https://debara-clothes.github.io/auth/'); // go to login page
-    }
+    // if (userToken) {
+    //     window.location.assign('https://debara.store/pages/designCart.html'); // Reload to reset the state
+    // } else {
+    //     window.location.assign('https://debara-clothes.github.io/auth/'); // go to login page
+    // }
+    window.location.assign('https://debara.store/pages/designCart.html'); // Reload to reset the state // test
 }
 
 function showAlert(success, message) {
@@ -984,7 +985,8 @@ if (window.location.pathname == "/pages/designCart.html") {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'authorization': `debaraYes09${userToken}`
+                // 'authorization': `debaraYes09${userToken}` // test
+                'authorization': `debaraYes09eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNmYzE1MWZlZDY2NzhiMWMwODg5NiIsImlhdCI6MTcyMjcwNDg2M30.V8u650GLFhJlZlvWyRDcqm40L2km5HBHXkj7VoooiUw`
             }
         }).then(response => response.json())
             .then(data => {
@@ -1028,7 +1030,7 @@ if (window.location.pathname == "/pages/designCart.html") {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'authorization': `debaraYes09${userToken}`
+                'authorization': `debaraYes09eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNmYzE1MWZlZDY2NzhiMWMwODg5NiIsImlhdCI6MTcyMjcwNDg2M30.V8u650GLFhJlZlvWyRDcqm40L2km5HBHXkj7VoooiUw`
             },
             body: JSON.stringify(formData),
         })
