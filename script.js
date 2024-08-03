@@ -12,6 +12,10 @@ let frontLogoWidth = 50;
 let backLogoX = 100;
 let backLogoY = 100;
 let backLogoWidth = 50;
+let frontDesign = '';
+let backDesign = '';
+let frontIsDragging = false;
+let backIsDragging = false;
 
 // localStorage.setItem('userToken', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNmYzE1MWZlZDY2NzhiMWMwODg5NiIsImlhdCI6MTcyMjcwNDg2M30.V8u650GLFhJlZlvWyRDcqm40L2km5HBHXkj7VoooiUw')
 
@@ -468,8 +472,6 @@ if (window.location.pathname == "/pages/design.html") {
     // Back T-shirt Canvas and Context
     const backCanvas = document.getElementById('backCanvas');
     backCtx = backCanvas.getContext('2d');
-    let frontDesign = '';
-    let backDesign = '';
 
     // Load initial T-shirt images
     frontTshirtImage.onload = function () {
@@ -495,11 +497,9 @@ if (window.location.pathname == "/pages/design.html") {
     }
 
     // Front T-shirt Logo Variables
-    let frontIsDragging = false;
     let frontDragStartX, frontDragStartY;
 
     // Back T-shirt Logo Variables
-    let backIsDragging = false;
     let backDragStartX, backDragStartY;
 
     // Event listeners for window resize
