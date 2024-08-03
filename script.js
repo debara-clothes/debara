@@ -74,7 +74,7 @@ function showAlert(success, message) {
 
 function login() {
     // Placeholder login function
-    window.location.reload(); // Reload to update the navbar
+    window.location.assign('https://debara-clothes.github.io/auth/');
 }
 
 if (window.location.pathname == "/" || window.location.pathname == "/index.html") {
