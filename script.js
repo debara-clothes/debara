@@ -17,6 +17,23 @@ let backDesign = '';
 let frontIsDragging = false;
 let backIsDragging = false;
 
+const base64ToFile = (url) => {
+    let arr = url.split(',');
+    let mime = arr[0].match(/:(.*?);/)[1];
+    let data = arr[1];
+
+    let dataStr = atob(data);
+    let n = dataStr.length;
+    let dataArr = new Uint8Array(n);
+
+    while (n--) {
+        dataArr[n] = dataStr.charCodeAt(n);
+    }
+
+    let file = new File([dataArr], 'File.jpeg', { type: mime });
+    return file;
+};
+
 // localStorage.setItem('userToken', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNmYzE1MWZlZDY2NzhiMWMwODg5NiIsImlhdCI6MTcyMjcwNDg2M30.V8u650GLFhJlZlvWyRDcqm40L2km5HBHXkj7VoooiUw')
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -859,23 +876,6 @@ if (window.location.pathname == "/pages/design.html") {
         event.preventDefault();
         backIsDragging = false;
     }
-
-    const base64ToFile = (url) => {
-        let arr = url.split(',');
-        let mime = arr[0].match(/:(.*?);/)[1];
-        let data = arr[1];
-
-        let dataStr = atob(data);
-        let n = dataStr.length;
-        let dataArr = new Uint8Array(n);
-
-        while (n--) {
-            dataArr[n] = dataStr.charCodeAt(n);
-        }
-
-        let file = new File([dataArr], 'File.jpeg', { type: mime });
-        return file;
-    };
 
     function openDesignPopup() {
         // if (userToken) {
