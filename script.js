@@ -624,8 +624,10 @@ if (window.location.pathname == "/pages/design.html") {
 
     // Back T-shirt Canvas Functions
     function resizeBackCanvas() {
-        backCanvas.width = backCanvas.parentNode.clientWidth;
-        backCanvas.height = backCanvas.width * (backTshirtImage.height / backTshirtImage.width);
+        if (backTshirtImage.width && backTshirtImage.height) {
+            backCanvas.width = backCanvas.parentNode.clientWidth;
+            backCanvas.height = backCanvas.width * (backTshirtImage.height / backTshirtImage.width);
+        }
     }
 
     document.getElementById('backLogoInput').addEventListener('change', function (event) {
