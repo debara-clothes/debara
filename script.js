@@ -6,6 +6,12 @@ let frontCtx;
 let backCtx;
 let frontLogoImage = null;
 let backLogoImage = null;
+let frontLogoX = 100;
+let frontLogoY = 100;
+let frontLogoWidth = 50;
+let backLogoX = 100;
+let backLogoY = 100;
+let backLogoWidth = 50;
 
 document.addEventListener('DOMContentLoaded', () => {
     const loginSection = document.getElementById('login-section');
@@ -487,16 +493,10 @@ if (window.location.pathname == "/pages/design.html") {
     }
 
     // Front T-shirt Logo Variables
-    let frontLogoX = 100;
-    let frontLogoY = 100;
-    let frontLogoWidth = 50;
     let frontIsDragging = false;
     let frontDragStartX, frontDragStartY;
 
     // Back T-shirt Logo Variables
-    let backLogoX = 100;
-    let backLogoY = 100;
-    let backLogoWidth = 50;
     let backIsDragging = false;
     let backDragStartX, backDragStartY;
 
