@@ -13,7 +13,7 @@ let backLogoX = 100;
 let backLogoY = 100;
 let backLogoWidth = 50;
 
-localStorage.setItem('userToken', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNmYzE1MWZlZDY2NzhiMWMwODg5NiIsImlhdCI6MTcyMjcwNDg2M30.V8u650GLFhJlZlvWyRDcqm40L2km5HBHXkj7VoooiUw')
+// localStorage.setItem('userToken', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNmYzE1MWZlZDY2NzhiMWMwODg5NiIsImlhdCI6MTcyMjcwNDg2M30.V8u650GLFhJlZlvWyRDcqm40L2km5HBHXkj7VoooiUw')
 
 document.addEventListener('DOMContentLoaded', () => {
     const loginSection = document.getElementById('login-section');
@@ -878,11 +878,12 @@ if (window.location.pathname == "/pages/design.html") {
     };
 
     function openDesignPopup() {
-        if (userToken) {
-            document.querySelector('.design-popup-container').classList.replace('hide-popup', 'active-popup')
-        } else {
-            window.location.assign('https://debara-clothes.github.io/auth/'); // go to Login page
-        }
+        // if (userToken) {
+        //     document.querySelector('.design-popup-container').classList.replace('hide-popup', 'active-popup')
+        // } else {
+        //     window.location.assign('https://debara-clothes.github.io/auth/'); // go to Login page
+        // }
+        document.querySelector('.design-popup-container').classList.replace('hide-popup', 'active-popup')
     }
 
     function closeDesignPopup() {
