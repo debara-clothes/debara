@@ -76,12 +76,11 @@ function goToCart() {
 
 // function using for going to design cart page 
 function goToDesignCart() {
-    // if (userToken) {
-    //     window.location.assign('https://debara.store/pages/designCart.html'); // Reload to reset the state
-    // } else {
-    //     window.location.assign('https://debara-clothes.github.io/auth/'); // go to login page
-    // }
-    window.location.assign('https://debara.store/pages/designCart.html'); // Reload to reset the state // test
+    if (userToken) {
+        window.location.assign('https://debara.store/pages/designCart.html'); // Reload to reset the state
+    } else {
+        window.location.assign('https://debara-clothes.github.io/auth/'); // go to login page
+    }
 }
 
 function showAlert(success, message) {
@@ -388,8 +387,7 @@ if (window.location.pathname == "/pages/cart.html") {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                // 'authorization': `debaraYes09${userToken}`
-                'authorization': `debaraYes09eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNmYzE1MWZlZDY2NzhiMWMwODg5NiIsImlhdCI6MTcyMjcwNDg2M30.V8u650GLFhJlZlvWyRDcqm40L2km5HBHXkj7VoooiUw`
+                'authorization': `debaraYes09${userToken}`
             }
         }).then(response => response.json())
             .then(data => {
@@ -429,8 +427,7 @@ if (window.location.pathname == "/pages/cart.html") {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                // 'authorization': `debaraYes09${userToken}`
-                'authorization': `debaraYes09eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNmYzE1MWZlZDY2NzhiMWMwODg5NiIsImlhdCI6MTcyMjcwNDg2M30.V8u650GLFhJlZlvWyRDcqm40L2km5HBHXkj7VoooiUw`
+                'authorization': `debaraYes09${userToken}`
             },
             body: JSON.stringify({
                 count: newQuantity
@@ -459,8 +456,7 @@ if (window.location.pathname == "/pages/cart.html") {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
-                // 'authorization': `debaraYes09${userToken}`
-                'authorization': `debaraYes09eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNmYzE1MWZlZDY2NzhiMWMwODg5NiIsImlhdCI6MTcyMjcwNDg2M30.V8u650GLFhJlZlvWyRDcqm40L2km5HBHXkj7VoooiUw`
+                'authorization': `debaraYes09${userToken}`
             }
         }).then(response => response.json())
             .then(data => {
@@ -959,7 +955,7 @@ if (window.location.pathname == "/pages/design.html") {
 }
 
 if (window.location.pathname == "/pages/designCart.html") {
-    const showDesignDetails = (designs) => {
+    function showDesignDetails(designs) {
         let cartona = ''
         for (let index = 0; index < designs.length; index++) {
             const element = designs[index];
@@ -988,8 +984,7 @@ if (window.location.pathname == "/pages/designCart.html") {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                // 'authorization': `debaraYes09${userToken}` // test
-                'authorization': `debaraYes09eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNmYzE1MWZlZDY2NzhiMWMwODg5NiIsImlhdCI6MTcyMjcwNDg2M30.V8u650GLFhJlZlvWyRDcqm40L2km5HBHXkj7VoooiUw`
+                'authorization': `debaraYes09${userToken}` 
             }
         }).then(response => response.json())
             .then(data => {
@@ -1036,7 +1031,7 @@ if (window.location.pathname == "/pages/designCart.html") {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'authorization': `debaraYes09eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTNmYzE1MWZlZDY2NzhiMWMwODg5NiIsImlhdCI6MTcyMjcwNDg2M30.V8u650GLFhJlZlvWyRDcqm40L2km5HBHXkj7VoooiUw`
+                'authorization': `debaraYes09${userToken}` 
             },
             body: JSON.stringify(formData),
         })
@@ -1195,5 +1190,6 @@ if (window.location.pathname == "/pages/order.html") {
 
     document.getElementById('closeWindow').addEventListener('click', function () {
         document.getElementById('thankYouWindow').classList.add('hidden');
+        window.location.assign('https://debara.store/'); // Reload to reset the state
     });
 }
